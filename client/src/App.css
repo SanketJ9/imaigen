@@ -1,0 +1,35 @@
+.create-btn {
+  padding: 10px 20px;
+  background: rgb(135, 65, 228);
+  color: white;
+  margin-right: 5vw;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main {
+  height: calc(100vh-73px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 5vw;
+}
+
+.logo-text {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+.logo-img {
+  width: 100%;
+
+}
