@@ -22,7 +22,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
   
-        const response = await fetch('http://localhost:8080/api/v1/paint', {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/paint`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -65,12 +65,12 @@ const CreatePost = () => {
       <div className='font-bold text-[#ffffff] text-[32px]'>
         <h1 className=''>Create</h1>
         <p className='mt-2 text-[#a5a5a5] text-[16px] max-w[500px]'>
-          Create imaginative and visually stunning images through DALL-E AI and Share with the community
+          Create imaginative and visually stunning images through Gemini AI and Share with the community
         </p>
       </div>
 
       <form className='mt-8 w-100 flex flex-row gap-12' onSubmit={handleSubmit}>
-        <div className='flex flex-col'>
+        <div className='flex flex-col w-[50%] gap-5'>
           <div className='flex flex-col gap-5'>
             <FormField
               labelName="Your Name"
@@ -114,7 +114,7 @@ const CreatePost = () => {
             </button>
           </div>
         </div>
-        <div className='relative bg-[#343434] border-[#676767] text-sm rounded-xl
+        <div className='relative w-[50%] bg-[#343434] border-[#676767] text-sm rounded-xl
           focus:ring-[#8c00ff] focus:border-[#8c00ff] w-100 p-2 h-auto flex justify-center items-center'>
             {form.photo ? (
               <img
